@@ -1,11 +1,12 @@
 import React from 'react';
 import {
   // TextInput,
+    Image,
   Text,
   View,
 } from 'react-native';
 import { SyncRegistry } from 'react-native-synchronous-list';
-
+import FrescoImageView from './FrescoImage'
 const TemplateName = 'MyTemplate';
 
 // const RowTemplate = (props) => (
@@ -18,13 +19,14 @@ const TemplateName = 'MyTemplate';
 //   </View>
 // );
 const RowTemplate = (props) => (
-  <View style={{ padding: 10, width: props.width, height: props.height, backgroundColor: '#AAA13377'}}>
-    <Text
+  <View style={{ width: props.width, height: props.height, backgroundColor: '#AAA13377'}}>
+   {/* <Text
       style={{ backgroundColor: '#FFFFFF99', flexGrow: 1 }}
       editable={false}
     >
       {props.name}
-    </Text>
+    </Text>*/}
+      <FrescoImageView style={{ flex:1,backgroundColor:'black'}} src={props.name} />
   </View>
 );
   
